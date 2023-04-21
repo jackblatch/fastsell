@@ -17,6 +17,12 @@ Ecommerce store builder, allowing users to create an online store, manage produc
 - Customised online store
 - Secure checkout (Stripe)
 
+## Set up .env files - (env-examples provided in relevant folders)
+
+- /packages/database
+- /apps/admin
+- /apps/storefront
+
 ## Installation
 
 `npm i` in root folder
