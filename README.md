@@ -25,6 +25,7 @@ Ecommerce store builder, allowing users to create an online store, manage produc
 
 - App : `npm run dev`
 - Prisma Studio: `npx prisma studio` (in /packages/database)
+- Prisma Migrate : `npx prisma migrate dev` (in /packages/database)
 - Seed data : `npm run seed`(in /packages/database)
 
 ## Set up .env files - (env-examples provided in relevant folders)
