@@ -15,7 +15,7 @@ module.exports = {
     return [
       {
         source: '/',
-        destination: 'https://histreet-admin.vercel.app',
+        destination: process.env.NEXT_PUBLIC_APP_URL,
         permanent: true,
         basePath: false,
       },

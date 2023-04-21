@@ -10,7 +10,6 @@ import Image from 'next/image';
 import { useQuery } from '@tanstack/react-query';
 import SearchInputs from '../components/SearchInputs';
 
-
 type Store = {
   store_id: string;
   store_name: string;
@@ -34,9 +33,9 @@ export default function AdminLayout({
   });
 
   const [currentStoreUrl, setCurrentStoreUrl] = useState(storeUrl);
-   const helperGetUrl = (string: string) => {
-     return string.split('/')[string.split('/').length - 1];
-   };
+  const helperGetUrl = (string: string) => {
+    return string.split('/')[string.split('/').length - 1];
+  };
 
   const initialNavigation = [
     {
@@ -78,16 +77,17 @@ export default function AdminLayout({
       </Head>
       <Toaster />
 
-      <div className="mx-auto flex h-12 justify-between items-center w-full border-slate-200 border-b ">
+      <div className="mx-auto flex  justify-between items-center w-full border-slate-200 border-b bg-slate-900">
         <Bars3Icon
           className="h-6 ml-4 md:hidden cursor-pointer"
           onClick={() => setIsNavOpen((prev) => !prev)}
         />
-        <div className="flex justify-end md:justify-between items-center w-full gap-2">
+        <div className="flex justify-end md:justify-between items-center w-full gap-2 bg-slate-900 py-4">
           <Link href={`/admin/${storeUrl}/dashboard`}>
             <div className="hidden md:flex gap-2 ml-4 text-2xl place-content-center">
-              <Image src={logoSrc} alt="company logo" width={40} height={40} />
-              <div className="flex justify-center items-center">HiStreet</div>
+              <div className="flex justify-center items-center text-white font-semibold tracking-wide">
+                FastSell
+              </div>
             </div>
           </Link>
 
@@ -140,13 +140,13 @@ export default function AdminLayout({
           </select>
         </div>
       </div>
-      <div className="flex h-[calc(100vh-48px)] flex-col md:flex-row">
-        <nav className="hidden md:flex flex-col justify-between border-slate-200 border-r w-40 text-xs">
+      <div className="flex h-[calc(100vh-76px)] flex-col md:flex-row">
+        <nav className="hidden md:flex flex-col justify-between border-slate-200 border-r w-72 bg-gray-100">
           <div className="flex flex-col justify-between px-3 pt-3">
             {initialNavigation.map((page, index) => {
               return (
                 <Link href={page.href} key={index}>
-                  <div className="px-3 pt-3 text-base">{page.name}</div>
+                  <div className="px-3 pt-3 text-lg">{page.name}</div>
                 </Link>
               );
             })}
@@ -204,7 +204,7 @@ export default function AdminLayout({
             </div>
           </div>
         </nav>
-        <div className="overflow-y-scroll p-5 w-[95%]">{children}</div>
+        <div className="p-4 w-full overflow-y-scroll">{children}</div>
       </div>
     </>
   );

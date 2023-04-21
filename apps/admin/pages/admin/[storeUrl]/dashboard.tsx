@@ -13,9 +13,6 @@ import LoadingSpinner from '../../../components/Loading';
 import DashboardCard from '../../../components/DashboardCard';
 export { getServerSideProps };
 
-
-
-
 const labels = ['Week1', 'Week2', 'Week3', 'Week4'];
 const optionsSalesCustomer = {
   responsive: true,
@@ -114,7 +111,7 @@ function Dashboard() {
 
   if (isError) return <p>Error</p>;
   return (
-    <div className="flex flex-col object-contain justify-center items-center -ml-8 md:ml-0">
+    <div className="flex flex-col object-contain justify-center items-center -ml-8 md:ml-0 mt-8">
       <Heading title="Dashboard" type="h1" />
       <Heading title={propHeading} type="h4" />
       <div className="flex flex-col object-contain m-5">
@@ -123,20 +120,19 @@ function Dashboard() {
             title="Weekly Revenue"
             icon={iconRevenue}
             props={revenueProps}
-            colour='purple'
+            colour="purple"
           />
           <DashboardCard
             title="Weekly Orders"
             icon={iconOrders}
             props={orderProps}
-            colour='orange'
+            colour="orange"
           />
           <DashboardCard
             title="Weekly Customers"
             icon={iconCustomer}
             props={customerProps}
-            colour='cyan'
-
+            colour="cyan"
           />
         </div>
         <div className="flex flex-col w-full justify-center items-center mt-1 md:flex-row md:gap-5 shadow py-5 px-5 overflow-hidden rounded-md">

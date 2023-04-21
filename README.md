@@ -30,5 +30,5 @@ Ecommerce store builder, allowing users to create an online store, manage produc
 - Testing/CI: Cypress, GitHub Actions
 
 
-Note: This project is an extension of a project in which I was a collaborator on. See more [here](https://github.com/MitchCrystal/histreet).
+Note: This project is an extension of a project in which I was a collaborator on. The original project can be found [here](https://github.com/MitchCrystal/histreet).
 
